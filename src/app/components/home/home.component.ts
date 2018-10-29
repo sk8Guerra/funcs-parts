@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as d3 from 'd3';
+import * as functionPlot from 'function-plot';
 
 @Component({
   selector: 'home',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.printFunction("skateforever");
+  }
 
   ngOnInit() {
   }
 
+  printFunction (lol) : void {
+    functionPlot.functionPlot({
+      target: '#quadratic',
+      data: [{
+        fn: 'x^2'
+      }]
+    });
+  }
 }

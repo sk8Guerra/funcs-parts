@@ -35,7 +35,10 @@
                 "input": "src/styles.css"
               }
             ],
-            "scripts": []
+            "scripts": [
+              "./myjs/d3.min.js",
+              "./myjs/function-plot.js"
+            ]
           },
           "configurations": {
             "production": {
