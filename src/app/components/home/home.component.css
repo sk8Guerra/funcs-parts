@@ -1,0 +1,21 @@
+.graph {
+  height: 500px;
+  width: auto;
+  text-align: center;
+}
+
+.limits {
+  flex-direction: row;
+}
+
+.functions {
+  flex-direction: column;
+}
+
+.spacing {
+  margin: 5px;
+}
+
+.functionInput {
+  width: 475px;
+}

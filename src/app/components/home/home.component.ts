@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as d3 from 'd3';
-import * as functionPlot from 'function-plot';
+declare var functionPlot;
+
 
 @Component({
   selector: 'home',
@@ -9,19 +9,42 @@ import * as functionPlot from 'function-plot';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() {
-    this.printFunction("skateforever");
-  }
+  functions: any = [];
+  model: any = {};
+  options = {
+    target: '#graphic',
+    data: []
+  };
+
+  constructor() {}
 
   ngOnInit() {
+    this.printFunction(this.options);
   }
 
-  printFunction (lol) : void {
-    functionPlot.functionPlot({
-      target: '#quadratic',
-      data: [{
-        fn: 'x^2'
-      }]
-    });
+  onSubmitFunction() {
+    let newModel: any = {}
+    let color = '#'+(Math.random()*0xFFFFFF<<0).toString(16);
+    if ( typeof this.model.limit1 === 'undefined' &&
+         typeof this.model.limit1 === 'undefined') {
+      newModel = {
+        fn: this.model.func,
+        color: color
+      }
+    } else {
+      newModel = {
+        fn: this.model.func,
+        range: [this.model.limit1, this.model.limit2],
+        color: color
+      }
+    }
+    this.functions.push(newModel);
+    this.options.data = this.functions;
+    this.printFunction(this.options);
+    console.log(this.options.data);
+  }
+
+  printFunction (options) : void {
+    functionPlot(options);
   }
 }

@@ -1,4 +1,42 @@
-<p>
-  home works!
-</p>
-<div id="quadratic"></div>
+<div class="graph">
+  <h1>Graficas por partes</h1>
+  <br />
+  <form class="form" (ngSubmit)="onSubmitFunction()">
+    <div class="functions">
+      <mat-form-field
+        appearance="outline"
+        class="functionInput">
+          <mat-label>Function</mat-label>
+          <input
+            matInput
+            [(ngModel)]="model.func"
+            name="func">
+          <mat-icon matSuffix>show_chart</mat-icon>
+      </mat-form-field>
+      <div class="limits">
+        <mat-form-field
+          class="spacing"
+          appearance="outline">
+            <mat-label>Limite 1</mat-label>
+            <input
+              matInput
+              [(ngModel)]="model.limit1"
+              name="limite1">
+            <mat-icon matSuffix>trending_up</mat-icon>
+        </mat-form-field>
+        <mat-form-field
+          class="spacing"
+          appearance="outline">
+            <mat-label>Limite 2</mat-label>
+            <input
+              matInput
+              [(ngModel)]="model.limit2"
+              name="limite2">
+            <mat-icon matSuffix>trending_down</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+    <button mat-stroked-button color="primary">GRAFICAR</button>
+  </form>
+  <div id="graphic"></div>
+</div>

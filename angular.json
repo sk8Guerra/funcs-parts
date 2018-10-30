@@ -35,10 +35,7 @@
                 "input": "src/styles.css"
               }
             ],
-            "scripts": [
-              "./myjs/d3.min.js",
-              "./myjs/function-plot.js"
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
