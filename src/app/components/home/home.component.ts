@@ -41,7 +41,6 @@ export class HomeComponent implements OnInit {
     this.functions.push(newModel);
     this.options.data = this.functions;
     this.printFunction(this.options);
-    console.log(this.options.data);
   }
 
   printFunction (options) : void {

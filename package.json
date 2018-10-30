@@ -27,6 +27,7 @@
     "d3": "^3.5.17",
     "function-plot": "^1.18.1",
     "rxjs": "^6.0.0-rc.0",
+    "simple-pdf-viewer": "^2.0.2",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
