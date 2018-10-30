@@ -19,3 +19,8 @@
 .functionInput {
   width: 475px;
 }
+
+.graphDiv {
+  height: 500px;
+  width: auto;
+}

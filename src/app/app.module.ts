@@ -23,7 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     NavbarComponent
   ],
   imports: [
-    SimplePdfViewerModule
+    SimplePdfViewerModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
